@@ -20,9 +20,14 @@ with os.scandir(basepath) as entries:
                         text.append(newLine)
 
             fileName = re.sub(r'(.(txt)|(html))$', '', entry.name)
+            print(fileName)
+
             fileName = fileName.split('_')
+            print(len(fileName))
 
             newFile = fileName[1].lower() + '-' + fileName[2].lower() + '-volume-' + fileName[0].lstrip('0') + '.html'
+
+            
 
             content = '\n'.join(text)
 
